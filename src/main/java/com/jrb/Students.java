@@ -1,5 +1,8 @@
 package com.jrb;
 
+import jakarta.persistence.Entity;
+
+@Entity
 public class Students {
     private int sID;
     private String sName;

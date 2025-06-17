@@ -17,7 +17,9 @@ public class Main {
 //        to do that we must first create SessionFactory
 
         Configuration config = new Configuration();
-        config.configure();
+        config.addAnnotatedClass(com.jrb.Students.class);
+        config.configure("hibernate.cfg.xml");  //By default, it will search for hibernate.cfg.xml if the name shall be different then
+        // name shall be passed as an argument.
 
         SessionFactory factory = config.buildSessionFactory();
 
